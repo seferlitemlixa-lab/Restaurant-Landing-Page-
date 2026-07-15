@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Ember Room — Baku Waterfront Dining</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Jost:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="brand">The Ember Room</a>
+        <nav class="nav-links">
+            <a href="#menu">Menu</a>
+            <a href="#ambiance">Ambiance</a>
+            <a href="#reserve">Reserve</a>
+        </nav>
+        <a href="tel:+994124041188" class="nav-phone">+994 12 404 11 88</a>
+    </div>
+</header>
+
+<section class="hero">
+    <img src="images/ambiance-04-skyline-dining.jpg" alt="" class="hero-img" />
+    <div class="hero-scrim"></div>
+    <div class="hero-content">
+        <p class="eyebrow">Baku Waterfront · Est. 2019</p>
+        <h1>The Ember Room</h1>
+        <p class="hero-sub">Fire-kissed pasta, char-grilled mains, and slow mornings — served with a view of the bay.</p>
+        <div class="hero-actions">
+            <a href="#reserve" class="btn btn-solid">Reserve a Table</a>
+            <a href="#menu" class="btn btn-ghost">View Menu</a>
+        </div>
+    </div>
+</section>
+
+<section class="intro">
+    <div class="intro-text">
+        <p class="eyebrow">Our Kitchen</p>
+        <h2>Cooked over flame, plated with restraint</h2>
+        <p>Every dish at The Ember Room begins over live fire — from our hand-rolled pastas to our dry-aged steaks. We keep the menu small and the sourcing honest, changing with what the market and the season give us.</p>
+    </div>
+</section>
+
+<section class="menu" id="menu">
+    <div class="menu-head">
+        <div>
+            <p class="eyebrow">The Menu</p>
+            <h2>Find your dish</h2>
+        </div>
+
+        <div class="menu-controls">
+            <div class="search-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <input type="text" id="dishSearch" placeholder="Search a dish… e.g. salmon, burger, pasta" />
+            </div>
+            <div class="currency-toggle" id="currencyToggle">
+                <button class="cur-btn active" data-cur="azn">AZN ₼</button>
+                <button class="cur-btn" data-cur="usd">USD $</button>
+                <button class="cur-btn" data-cur="eur">EUR €</button>
+            </div>
+        </div>
+    </div>
+
+    <p class="no-results" id="noResults" hidden>No dishes match your search — try a different word.</p>
+
+    <div class="menu-groups" id="menuGroups">
+
+        <div class="menu-group" data-group="boards">
+            <h3 class="group-title">Boards &amp; Brunch</h3>
+            <div class="dish-grid">
+
+                <article class="dish-card" data-name="garden breakfast board">
+                    <div class="dish-img"><img src="images/dish-02-breakfast-board.webp" alt="Garden Breakfast Board" /></div>
+                    <div class="dish-body">
+                        <h4>Garden Breakfast Board</h4>
+                        <p>Soft-boiled eggs, prosciutto, honey-marc goat cheese, berries, cucumber, warm muffins, chili-honey.</p>
+                        <span class="price" data-azn="42" data-usd="24" data-eur="22">₼42</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="golden hour waffle berry board">
+                    <div class="dish-img"><img src="images/dish-03-waffle-board.jpg" alt="Golden Hour Waffle & Berry Board" /></div>
+                    <div class="dish-body">
+                        <h4>Golden Hour Waffle &amp; Berry Board</h4>
+                        <p>Buttermilk waffles, brioche french toast, crisp bacon, berry muffins, warm maple, seasonal berries.</p>
+                        <span class="price" data-azn="38" data-usd="22" data-eur="20">₼38</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="wine country cheese board">
+                    <div class="dish-img"><img src="images/wine.jpg" alt="Wine Country Cheese Board" /></div>
+                    <div class="dish-body">
+                        <h4>Wine Country Cheese Board</h4>
+                        <p>Aged cheddar, triple-cream brie, spiced sausage, candied pecans, cornichons, stone fruit, fig jam.</p>
+                        <span class="price" data-azn="55" data-usd="32" data-eur="29">₼55</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="menu-group" data-group="pasta">
+            <h3 class="group-title">Hand-Rolled Pasta</h3>
+            <div class="dish-grid">
+
+                <article class="dish-card" data-name="penne bianca sun-dried tomato olive">
+                    <div class="dish-img"><img src="images/dish-01-pasta-bianca.jpg" alt="Penne Bianca with Sun-Dried Tomato & Olive" /></div>
+                    <div class="dish-body">
+                        <h4>Penne Bianca with Sun-Dried Tomato &amp; Olive</h4>
+                        <p>Penne in a light garlic cream, kalamata olives, sun-dried tomato, wild mushroom, fresh cilantro.</p>
+                        <span class="price" data-azn="29" data-usd="17" data-eur="15">₼29</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="rigatoni alla vodka">
+                    <div class="dish-img"><img src="images/vodka.jpg" alt="Rigatoni alla Vodka" /></div>
+                    <div class="dish-body">
+                        <h4>Rigatoni alla Vodka</h4>
+                        <p>Rigatoni tossed in a rosé vodka sauce, aged parmesan, torn parsley.</p>
+                        <span class="price" data-azn="31" data-usd="18" data-eur="16">₼31</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="bucatini pomodoro">
+                    <div class="dish-img"><img src="images/pomador.jpg" alt="Bucatini Pomodoro" /></div>
+                    <div class="dish-body">
+                        <h4>Bucatini Pomodoro</h4>
+                        <p>Slow-simmered San Marzano tomato, bucatini, grated ricotta salata, basil.</p>
+                        <span class="price" data-azn="27" data-usd="16" data-eur="14">₼27</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="burrata linguine blistered cherry tomatoes">
+                    <div class="dish-img"><img src="images/burrata.jpg" alt="Burrata Linguine with Blistered Cherry Tomatoes" /></div>
+                    <div class="dish-body">
+                        <h4>Burrata Linguine with Blistered Tomatoes</h4>
+                        <p>Linguine, blistered cherry tomatoes, torn burrata, chili crumb, fresh herbs.</p>
+                        <span class="price" data-azn="34" data-usd="20" data-eur="18">₼34</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="menu-group" data-group="mains">
+            <h3 class="group-title">From the Fire</h3>
+            <div class="dish-grid">
+
+                <article class="dish-card" data-name="herb butter ribeye baked potato">
+                    <div class="dish-img"><img src="images/dish-05-ribeye.jpg" alt="Herb-Butter Ribeye with Baked Potato" /></div>
+                    <div class="dish-body">
+                        <h4>Herb-Butter Ribeye with Baked Potato</h4>
+                        <p>Char-grilled ribeye finished in herb butter, twice-baked potato, charred squash, green beans.</p>
+                        <span class="price" data-azn="89" data-usd="52" data-eur="47">₼89</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="steak frites peppercorn cognac sauce">
+                    <div class="dish-img"><img src="images/dish-20-steak-frites.jpg" alt="Steak Frites with Peppercorn Cognac Sauce" /></div>
+                    <div class="dish-body">
+                        <h4>Steak Frites with Peppercorn Cognac Sauce</h4>
+                        <p>Prime striploin, hand-cut frites, cracked peppercorn cognac sauce, frisée.</p>
+                        <span class="price" data-azn="95" data-usd="55" data-eur="50">₼95</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="sesame teriyaki salmon brown rice green beans">
+                    <div class="dish-img"><img src="images/dish-12-teriyaki-salmon-a.jpg" alt="Sesame Teriyaki Salmon with Brown Rice & Green Beans" /></div>
+                    <div class="dish-body">
+                        <h4>Sesame Teriyaki Salmon with Brown Rice</h4>
+                        <p>Glazed salmon fillet, toasted sesame, brown rice, blistered green beans.</p>
+                        <span class="price" data-azn="58" data-usd="34" data-eur="31">₼58</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="glazed salmon jasmine rice asparagus">
+                    <div class="dish-img"><img src="images/salmonhoney.jpg" alt="Glazed Salmon with Jasmine Rice & Asparagus" /></div>
+                    <div class="dish-body">
+                        <h4>Glazed Salmon with Jasmine Rice &amp; Asparagus</h4>
+                        <p>Soy-honey glazed salmon, steamed jasmine rice, charred asparagus, wilted greens.</p>
+                        <span class="price" data-azn="61" data-usd="36" data-eur="32">₼61</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="roasted chicken charred peppers spinach feta">
+                    <div class="dish-img"><img src="images/feta.jpg" alt="Roasted Chicken with Charred Peppers, Spinach & Feta" /></div>
+                    <div class="dish-body">
+                        <h4>Roasted Chicken with Peppers &amp; Feta</h4>
+                        <p>Spice-rubbed chicken leg, charred peppers, wilted spinach, crumbled feta, roast garlic.</p>
+                        <span class="price" data-azn="49" data-usd="29" data-eur="26">₼49</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="sun-dried tomato cream chicken">
+                    <div class="dish-img"><img src="images/sundriedchicken.jpg" alt="Sun-Dried Tomato Cream Chicken" /></div>
+                    <div class="dish-body">
+                        <h4>Sun-Dried Tomato Cream Chicken</h4>
+                        <p>Pan-seared chicken breast, sun-dried tomato cream, garlic, fresh basil.</p>
+                        <span class="price" data-azn="52" data-usd="30" data-eur="27">₼52</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="menu-group" data-group="handheld">
+            <h3 class="group-title">Handhelds</h3>
+            <div class="dish-grid">
+
+                <article class="dish-card" data-name="Creamy Tomato Rigatoni Pasta">
+                    <div class="dish-img"><img src="images/ham.jpg" alt="Creamy Tomato Rigatoni Pasta" /></div>
+                    <div class="dish-body">
+                        <h4>  Juicy Mushroom and Beef Burgers </h4>
+                        <p>cremini mushrooms,olive oil,sea salt,lean ground beef,garlic powder,Italian seasoning,paprika,black pepper </p>
+                        <span class="price" data-azn="33" data-usd="19" data-eur="17">₼33</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="crispy chicken burger citrus slaw">
+                    <div class="dish-img"><img src="images/dish-17-chicken-burger.jpg" alt="Crispy Chicken Burger with Citrus Slaw" /></div>
+                    <div class="dish-body">
+                        <h4>Crispy Chicken Burger with Citrus Slaw</h4>
+                        <p>Crunchy fried chicken, tangy citrus slaw, pickles, and house sauce on a toasted brioche bun.</p>
+                        <span class="price" data-azn="31" data-usd="18" data-eur="16">₼31</span>
+                    </div>
+                </article>
+
+                
+
+            </div>
+        </div>
+
+        <div class="menu-group" data-group="Alcohol Drinks">
+            <h3 class="group-title">Alcohol Drinks</h3>
+            <div class="dish-grid">
+                  
+                <article class="dish-card" data-name="Hot Pink Malibu Coconut Margarita Recipe">
+                    <div class="dish-img"><img src="images/malibu.webp" alt="Hot Pink Malibu Coconut Margarita Recipe" /></div>
+                    <div class="dish-body">
+                        <h4>Hot Pink Malibu Coconut Margarita </h4>
+                        <p>Malibu Coconut Rum, Triple Sec, Lime Juice, Cranberry Juice, Pineapple Juice, Grenadine</p>
+                        <span class="price" data-azn="25" data-usd="15" data-eur="13">₼25</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="Classic Mojito Cocktail ">
+                    <div class="dish-img"><img src="images/mochito.jpg" alt="Classic Mojito Cocktail " /></div>
+                    <div class="dish-body">
+                        <h4>Classic Mojito Cocktail</h4>
+                        <p>White Rum, Fresh Lime Juice, Fresh Mint Leaves, Simple Syrup, Club Soda</p>
+                        <span class="price" data-azn="22" data-usd="13" data-eur="12">₼22</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="Whiskey Sour Cocktail ">
+                    <div class="dish-img"><img src="images/sour.jpg" alt="Whiskey Sour Cocktail " /></div>
+                    <div class="dish-body">
+                        <h4>Whiskey Sour Cocktail</h4>
+                        <p>Bourbon Whiskey, Fresh Lemon Juice, Simple Syrup, Egg White (optional), Angostura Bitters</p>
+                        <span class="price" data-azn="28" data-usd="17" data-eur="15">₼28</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="Classic Margarita Cocktail">
+                    <div class="dish-img"><img src="images/margarita.jpg" alt="Classic Margarita Cocktail " /></div>
+                    <div class="dish-body">
+                        <h4>Classic Margarita Cocktail</h4>
+                        <p>Tequila, Triple Sec, Fresh Lime Juice, Simple Syrup, Salt for rimming the glass</p>
+                        <span class="price" data-azn="26" data-usd="16" data-eur="14">₼26</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="Espresso Martini Cocktail">
+                    <div class="dish-img"><img src="images/martini.jpg" alt="Espresso Martini Cocktail " /></div>
+                    <div class="dish-body">
+                        <h4>Espresso Martini Cocktail</h4>
+                        <p>Vodka, Coffee Liqueur, Freshly Brewed Espresso, Simple Syrup, Coffee Beans for garnish</p>
+                        <span class="price" data-azn="30" data-usd="18" data-eur="16">₼30</span>
+                    </div>
+                </article>
+
+                <article class="dish-card" data-name="Pina Colada Cocktail">
+                    <div class="dish-img"><img src="images/pina.jpg" alt="Pina Colada Cocktail " /></div>
+                    <div class="dish-body">
+                        <h4>Pina Colada Cocktail</h4>
+                        <p>White Rum, Coconut Cream, Pineapple Juice, Crushed Ice, Pineapple Slice and Cherry for garnish</p>
+                        <span class="price" data-azn="27" data-usd="16" data-eur="14">₼27</span>
+                    </div>
+                </article>
+            </div>
+       </div>   
+
+                <div class="menu-group" data-group="Non-Alcohol Drinks">
+                    <h3 class="group-title">Non-Alcohol Drinks</h3>
+                    <div class="dish-grid">
+
+                        <article class="dish-card" data-name="Virgin Mojito">
+                            <div class="dish-img"><img src="images/virgin.jpg" alt="Virgin Mojito" /></div>
+                            <div class="dish-body">
+                                <h4>Virgin Mojito</h4>
+                                <p>Fresh Mint Leaves, Lime Juice, Simple Syrup, Club Soda, Crushed Ice</p>
+                                <span class="price" data-azn="15" data-usd="9" data-eur="8">₼15</span>
+                            </div>
+                        </article>
+
+                        <article class="dish-card" data-name="Fresh Lemonade">
+                            <div class="dish-img"><img src="images/lemonade.jpg" alt="Fresh Lemonade" /></div>
+                            <div class="dish-body">
+                                <h4>Fresh Lemonade</h4>
+                                <p>Freshly Squeezed Lemon Juice, Water, Simple Syrup, Ice Cubes</p>
+                                <span class="price" data-azn="12" data-usd="7" data-eur="6">₼12</span>
+                            </div>
+                        </article>
+
+                        <article class="dish-card" data-name="Iced Tea">
+                            <div class="dish-img"><img src="images/icedtea.jpg" alt="Iced Tea" /></div>
+                            <div class="dish-body">
+                                <h4>Iced Tea</h4>
+                                <p>Black Tea, Water, Ice Cubes, Lemon Slices, Fresh Mint Leaves</p>
+                                <span class="price" data-azn="10" data-usd="6" data-eur="5">₼10</span>
+                            </div>
+                        </article>
+
+                        <article class="dish-card" data-name="Sparkling Water">
+                            <div class="dish-img"><img src="images/sparklingwater.jpg" alt="Sparkling Water" /></div>
+                            <div class="dish-body">
+                                <h4>Sparkling Water</h4>
+                                <p>Carbonated Water, Natural Mineral Salts</p>
+                                <span class="price" data-azn="8" data-usd="5" data-eur="4">₼8</span>
+                            </div>
+                        </article>
+
+                        <article class="dish-card" data-name="Coconut Water">
+                            <div class="dish-img"><img src="images/coconutwater.webp" alt="Coconut Water" /></div>
+                            <div class="dish-body">
+                                <h4>Coconut Water</h4>
+                                <p>Fresh Coconut Water, Ice Cubes</p>
+                                <span class="price" data-azn="14" data-usd="8" data-eur="7">₼14</span>
+                            </div>
+                        </article>
+
+                        <article class="dish-card" data-name="Fruit Smoothie">
+                            <div class="dish-img"><img src="images/fruit.jpg" alt="Fruit Smoothie" /></div>
+                            <div class="dish-body">
+                                <h4>Fruit Smoothie</h4>
+                                <p>Mixed Fresh Fruits, Yogurt, Honey, Ice Cubes</p>
+                                <span class="price" data-azn="18" data-usd="11" data-eur="10">₼18</span>
+                            </div>
+                        </article>
+
+                        <article class="dish-card" data-name="Hot Chocolate">
+                            <div class="dish-img"><img src="images/hot.jpg" alt="Hot Chocolate" /></div>
+                            <div class="dish-body">
+                                <h4>Hot Chocolate</h4>
+                                <p>Rich Cocoa Powder, Milk, Sugar, Whipped Cream</p>
+                                <span class="price" data-azn="16" data-usd="10" data-eur="9">₼16</span>
+                            </div>
+                        </article>
+
+                        <article class="dish-card" data-name="Herbal Tea">
+                            <div class="dish-img"><img src="images/herbal.jpg" alt="Herbal Tea" /></div>
+                            <div class="dish-body">
+                                <h4>Herbal Tea</h4>
+                                <p>Variety of Herbal Blends, Hot Water, Honey (optional)</p>
+                                <span class="price" data-azn="12" data-usd="7" data-eur="6">₼12</span>
+                            </div> 
+                        </article>  
+                        
+                        <article class="dish-card" data-name=" Regular Water">
+                            <div class="dish-img"><img src="images/water.jpg" alt="Regular Water" /></div>
+                            <div class="dish-body">
+                                <h4>Regular Water</h4>
+                                <p>Fresh Clean Water, Ice Cubes</p>
+                                <span class="price" data-azn="5" data-usd="3" data-eur="2">₼5</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+            
+
+    </div>
+</section>
+
+<section class="ambiance" id="ambiance">
+    <div class="ambiance-head">
+        <p class="eyebrow">Inside The Ember Room</p>
+        <h2>An evening by the fire</h2>
+    </div>
+    <div class="ambiance-grid">
+        <figure>
+            <img src="images/ambiance-02-bar.jpg" alt="The bar at The Ember Room" />
+            <figcaption>The Amber Bar</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ambiance-01-chef.jpg" alt="Our chef plating a dish" />
+            <figcaption>Plated to order</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ambiance-03-wok.jpg" alt="Chef cooking over open flame" />
+            <figcaption>Cooked over live fire</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="reserve" id="reserve">
+    <div class="reserve-card">
+        <p class="eyebrow">Reservations</p>
+        <h2>Book your table</h2>
+        <p class="reserve-text">Tables are held for 15 minutes past reservation time. For parties of 8 or more, please call ahead.</p>
+        <a href="tel:+994124041188" class="reserve-phone">+994 12 404 11 88</a>
+        <div class="reserve-meta">
+            <div>
+                <span class="meta-label">Hours</span>
+                <span>Tue – Sun, 12:00 – 23:30</span>
+            </div>
+            <div>
+                <span class="meta-label">Address</span>
+                <span>28 Neftchilar Ave, Baku Boulevard, Baku</span>
+            </div>
+            <div>
+                <span class="meta-label">Email</span>
+                <span>reserve@theemberroom.az</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <p>The Ember Room · 28 Neftchilar Ave, Baku Boulevard, Baku, Azerbaijan</p>
+    <p>+994 12 404 11 88 · reserve@theemberroom.az</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
